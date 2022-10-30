@@ -1,6 +1,9 @@
 from tkinter import *
+# tkinter is used to make graphics
 import datetime
+# datetime module is used to work with date and time related tasks
 def date_time():
+    '''This function is used to change the graphics of the clock with the help of datetime module'''
     time = datetime.datetime.now()
     hr = time.strftime('%I')
     min = time.strftime('%M')
@@ -22,13 +25,15 @@ def date_time():
     lab_day.config(text=day)
     lab_hr.after(200,date_time)
 
+# calling the Tk class and storing in a variable
 clock = Tk()
 clock.title('*************FARHAN DIGITAL CLOCK*************')
-clock.geometry('1000x500')
-clock.config(bg='green')
+clock.geometry('1000x500') #setting the size of the screen
+clock.config(bg='green') #setting the background color of the screen
 
 
-
+''' The codes are used to make the boxes in the specific dimensions and label them with appropriate text
+,font,bg,fg etc'''
 lab_hr =Label(clock,text = '00',font=('Time New Roman',40,'bold'),bg='red',fg='white')
 lab_hr.place(x=120,y=50,height=110,width=100)
 lab_hr_text =Label(clock,text = 'Hours',font=('Time New Roman',20,'bold'),bg='red',fg='white')
@@ -69,6 +74,7 @@ lab_day.place(x=780,y=270,height=110,width=100)
 lab_day_text =Label(clock,text = 'Day',font=('Time New Roman',20,'bold'),bg='red',fg='white')
 lab_day_text.place(x=780,y=410,height=40,width=100)
 
+# Calling the function 
 date_time()
 
 clock.mainloop()
