@@ -1,4 +1,5 @@
 import cv2
+# cv2 works on the image related things ab=nd helps to enable the camera 
 face_cap = cv2.CascadeClassifier("Haarcascades/haarcascade_frontalface_default.xml")
 videos_cap = cv2.VideoCapture(0)
 while True:
